@@ -13,6 +13,7 @@
 
 We are committed to enhancing Liz Bank with the following features:
 
+- [x] **Display Balance:** Provide User's Balance in the console.
 - [ ] **Transaction History:** Provide users with a detailed history of account transactions.
 - [ ] **User Authentication:** Implement secure login mechanisms for account holders.
 
