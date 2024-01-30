@@ -50,16 +50,17 @@ void BankAccount ::createAccount()
     accPos = accPos + 1;
 
     cout << "Welcome " << name << "!" << endl
-         << "Your " << account_type << " account has been created.\n" << "Your Account Number is:\t"<< id <<endl;
+         << "Your " << account_type << " account has been created.\n"
+         << "Your Account Number is:\t" << id << endl;
 }
 
 void BankAccount ::depositAmt()
 {
-    int amount,id;
-    cout << "Enter your ID: " <<endl;
+    int amount, id;
+    cout << "Enter your ID: " << endl;
     cin >> id;
 
-    string name =acc_holder_name[id];
+    string name = acc_holder_name[id];
     cout << "Enter amount to deposit: " << endl;
     cin >> amount;
     balance[accPos] = amount;
@@ -72,13 +73,9 @@ void BankAccount ::withdrawAmt(int amount)
     int accNum, amtToDraw;
     cout << "Enter your Account Number: " << endl;
     cin >> accNum;
-    cout << "Enter amount withdraw: " <<endl;
+    cout << "Enter amount withdraw: " << endl;
     cin >> amtToDraw;
-    if(balance[accNum] < 200){
-        cout << "Can't Withdraw!\nYour Balance is less than 200" << endl;
-    }else{
-        cout << "Successfully withdrawn $"<< amtToDraw << "From your Account." <<endl; 
-    }
+    cout << "Successfully withdrawn $" << amtToDraw << "From your Account." << endl;
 }
 
 int main()
