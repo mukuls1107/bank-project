@@ -151,7 +151,8 @@ void BankAccount::showBalance()
         return;
     }
 
-    cout << "Balance for "<< acc_holder_name[id]<<"'s Account" << ": $" << balance[id] << endl;
+    cout << "Balance for " << acc_holder_name[id] << "'s Account"
+         << ": $" << balance[id] << endl;
     Sleep(3000);
     system("cls");
 }
@@ -203,6 +204,14 @@ int main()
             else
             {
                 accounts.displayAccounts();
+                Sleep(4000);
+                for (int i = 4; i > 0; i--)
+                {
+                    cout << "Clearing the screen in " << i << " seconds." << endl;
+                    Sleep(1000);
+                    system("cls");
+                }
+                system("cls");
             }
             break;
         default:
