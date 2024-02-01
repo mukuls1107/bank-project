@@ -151,7 +151,7 @@ void BankAccount::showBalance()
         return;
     }
 
-    cout << "Balance for Account Number " << id << ": $" << balance[id] << endl;
+    cout << "Balance for "<< acc_holder_name[id]<<"'s Account" << ": $" << balance[id] << endl;
     Sleep(3000);
     system("cls");
 }
@@ -168,7 +168,7 @@ int main()
     char choice;
     do
     {
-        cout << "\n\t=======\tMenu\t=======:\n1. Create Account\n2. Deposit\n3. Withdraw\n4. Show Balance\n5. Exit\n";
+        cout << "\n\t=======\t\tMenu\t=======:\n1. Create Account\n2. Deposit\n3. Withdraw\n4. Show Balance\n5. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -188,6 +188,7 @@ int main()
             break;
         case '5':
             cout << "Exiting program.\n";
+            system("cls");
             break;
         case 'a':
         case 'A':
@@ -197,7 +198,7 @@ int main()
             {
                 cout << "Invalid Access!"
                      << "Flushing the data ..." << endl;
-                exit(1);
+                system("cls");
             }
             else
             {
